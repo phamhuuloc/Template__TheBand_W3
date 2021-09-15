@@ -1,0 +1,418 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Comon */
+html{
+    scroll-behavior: smooth;
+    font-family: Arial, Helvetica, sans-serif;
+   
+}
+/* giúp cho thẻ sau khi dùng thuộc tính float không bị co  lại*/
+.mt-8{
+    margin-top: 8px;
+}
+.mt-16{
+    margin-top: 16px;
+}
+.clear{
+    clear: both;
+}
+.text-white{
+    color:#fff !important;
+}
+.row{
+    
+    margin-left: -8px;
+    margin-right: -8px;
+}
+.row::after{
+    content:"";
+    display: block;
+    clear:both;
+}
+.col{
+    padding-left: 8px;
+    padding-right: 8px;
+    float: left;
+}
+.col-third{
+    width: 33.3333%;
+    
+}
+.col-half{
+    width: 50%;
+
+}
+.col-full{
+   
+
+    width: 100%;
+}
+.text-align{
+    text-align: center !important;
+}
+.btn:hover{
+    background-color: #ccc;
+    color: #000;
+}
+.btn{
+
+    display: inline-block;
+    padding: 10px 16px;
+    margin-bottom: 16px;
+    color:#fff;
+    background-color: #000;
+    text-decoration: none;
+    border: 0px solid #000;
+    cursor: pointer;
+   
+    text-align: center;
+
+    appearance: none;
+    -webkit-appearance: none;
+
+}
+.pull-right{
+    float: right;
+}
+/* 
+1.vị trí
+2.kích thước
+3.màu sắc
+4.kiểu dáng kích thước
+
+
+ */
+ 
+ /* Main */
+#main{
+
+}
+/* header */
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    height: 46px;
+    background-color: #000;
+    
+   
+}
+#header .mobile-menu-btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: none;
+}
+#header .mobile-menu-btn,
+#header .search-btn
+{
+    float: right;
+   
+    
+}
+#header .mobile-menu-btn:hover .menu-icon{
+    color:#000;
+}
+#header .mobile-menu-btn:hover {
+    background-color: #ccc;
+    
+}
+#header .search-icon:hover{
+    display:block;
+
+    background-color: #f44336;
+
+    cursor: pointer;
+}
+#header .menu-icon,
+#header .search-icon{
+   
+    padding:0 21px;
+    
+    color: #fff;
+    font-size: 20px;
+    line-height: 46px;
+   
+  
+  
+}
+#nav{
+    display:inline-block;
+}
+#nav > li{
+    display: inline-block; /* dòng code này giúp cho li nằm trên cùng 1 khoois*/
+    
+}
+#nav > li > a{
+    text-transform: uppercase;
+}
+#nav ,.subnav{
+    list-style-type: none;
+}
+#nav li{
+    
+    position: relative;
+}
+
+#nav li a{
+    color: #fff;
+    padding: 0 24px;
+    line-height: 46px;
+    text-decoration: none;
+   
+  
+}
+#nav li:hover .subnav{
+    display:block;
+}
+
+#nav > li:hover > a{
+    display: block;
+
+    color: #000;
+    background-color: #ccc;
+    
+}
+
+#nav .subnav li:hover a{
+    color: #000;
+    background-color:#ccc;
+}
+#nav .subnav{
+    position: absolute;
+    top: 100%;
+    left: 0;
+
+    display: none;
+
+    background-color: #fff;
+    min-width: 160px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  
+    
+}
+
+#nav .subnav a{
+    display: block;
+    padding:0 12px;
+
+    color: #000;
+    line-height: 38px;
+   
+}
+#nav .nav-arrow-down{
+    font-size: 14px;
+}
+/* Slider */
+#slider{
+
+    position:relative;
+
+    margin-top: 46px;/*nếu như mà chỗ này không để là margin-top thì tất cả xung quanh bức hình đều bị ảnh hường và thụt vào một đoạn*/
+    padding-top: 50%;
+
+    background: url('../img/chicago.jpg') top center / cover no-repeat;
+}
+#slider .text-content{
+    position: absolute;
+    bottom: 47px;
+   
+    color: #fff;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    width: 100%;
+    text-align: center;
+}
+
+#slider .text-heading{
+    
+    font-weight: 400;
+    font-size: 24px;
+}
+
+#slider .text-description{
+    font-size: 15px;
+    margin-top: 25px;
+    text-shadow: 0 0 8px #000;
+}
+/* Content */
+
+#content .section-heading{
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+}
+#content .section-sub-heading{
+    font-style:italic;
+    opacity: 0.6;
+    margin: 25px 0;
+    font-size: 15px;
+
+    text-align: center;
+}
+#content .about-text{
+    margin: 25px 0;
+
+    font-size: 15px;
+    text-align: justify;
+    line-height: 1.4;
+}
+#content .content-section{
+    width: 800px;
+    max-width: 100%;
+    padding: 64px 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+#content .member-list{
+    padding: 32px 0;
+}
+#content .member-name{
+    font-size: 15px;
+    padding: 15px 0;
+}
+#content .member-img{
+    width: 154px;
+    border-radius: 4px;
+}
+
+/* Tour */
+#content .tour-section{
+    background-color: #000;
+   
+}
+.tickets-list li{
+    padding: 11px 16px;
+    font-size: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.tickets-list{
+    background-color: #fff;
+  
+}
+.tickets-list .sold-out{
+    margin-left: 16px;
+    padding: 3px 4px;
+
+    background-color: #f44336;
+    color: #fff;
+}
+.tickets-list .quantity{
+    float: right;
+    border-radius: 50%;
+
+    background-color: #000;
+    color: #fff;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+  
+}
+.place-list
+{
+    margin-top: 32px;
+    margin-bottom: 48px;
+    
+}
+
+
+.place-img{
+    display: block;
+
+    width: 100%;
+    
+}
+.place-img:hover{
+    opacity: 0.6;
+}
+
+.place-body{
+    padding: 0 16px;
+
+    font-size: 15px;
+    background-color: #fff;
+}
+
+.place-heading{
+    padding: 15px 0;
+}
+
+.place-time{
+    padding: 15px 0;
+    color: #757575;
+}
+.place-description{
+   margin-bottom: 15px;
+  
+}
+/* .setting{
+    display: inline-block;
+    padding: 22px 0;
+    width: 100%;
+} */
+.form-message{
+
+    display: inline-block;
+}
+.contac-info{
+    font-size: 18px;
+    line-height: 1.5;
+}
+.contac-info i[class*="ti-"]
+{
+    width: 30px;
+    display: inline-block;
+}
+
+.contac-form{
+    font-size: 15px;
+}
+.contac-form .form-control{
+    padding: 10px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+
+.map-img {
+    width: 100%;
+}
+
+
+/* Footer */
+#footer{
+    display: inline-block;
+
+    padding: 64px 16px;
+    width: 100%;
+
+    background-color: #fff;
+    text-align: center;
+}
+#footer .social-section a{
+    font-size: 24px;
+    text-decoration: none;
+    color:rgba(0, 0, 0, 0.7)
+}
+#footer .social-section a:hover{
+    color:rgba(0, 0, 0, 0.3)
+}
+#footer .copy-right{
+    padding: 24px;
+
+    font-size: 15px;
+    color:rgba(0, 0, 0, 0.5)
+}
+#footer .copy-right a{
+    color:rgba(0, 0, 0, 0.5)
+}
+
